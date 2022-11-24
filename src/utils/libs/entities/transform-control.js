@@ -52,7 +52,7 @@ export default class TransformControl {
       this.eventChange()
       // 事件
       // this.emit('change', this.curChooseObj)
-      console.log('position:' + this.curChooseObj.position.x + ',' + this.curChooseObj.position.y + ',' + this.curChooseObj.position.z)
+      // console.log('position:' + this.curChooseObj.position.x + ',' + this.curChooseObj.position.y + ',' + this.curChooseObj.position.z)
       
     })
     this.transformControls.addEventListener('mouseDown', () => {

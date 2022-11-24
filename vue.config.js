@@ -38,7 +38,8 @@ module.exports = {
     },
     proxy: {
       '/gomk': {
-        target: 'https://test.yueheli.cn/gomk',
+        // target: 'https://test.yueheli.cn/gomk',
+        target: 'http://111.35.4.25:16380/gomk',
         changeOrigin: true,
         pathRewrite: {
           '^/gomk': ''
