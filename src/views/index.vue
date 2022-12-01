@@ -320,6 +320,8 @@ export default {
         this.animate()
 
         this.backMain()
+        console.log('send loaded')
+        top.window.Loaded()
       }
     },
     addEnterPlan() {

@@ -14,7 +14,7 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     // do something before request is sent
-
+    
     if (getToken()) {
       // let each request carry token
       // ['X-Token'] is a custom headers key
@@ -25,6 +25,8 @@ service.interceptors.request.use(
       } else {
         config.headers['authorization'] = 'Bearer ' + getToken()
       }
+    } else {
+      config.headers['xc-token'] = 'dS1ahPuE_A2hR33pQj8LKMzra4KwELI2RFkq_ykI'
     }
     return config
   },
