@@ -31,8 +31,8 @@
 
   </div>
   
-  <div class="btn-nor abs" style="right: 50%;margin-right: -207px;bottom: 50px;" v-if="showBtnEdit && !editMode && !isVisitorPage" @click="handleGoVisitor">参观者</div>
-  <div class="btn-nor abs" style="right: 50%;margin-right: -367px;bottom: 50px;" v-if="!editMode" @click="handleMeasureLength">测距</div>
+  <!-- <div class="btn-nor abs" style="right: 50%;margin-right: -207px;bottom: 50px;" v-if="showBtnEdit && !editMode && !isVisitorPage" @click="handleGoVisitor">参观者</div> -->
+  <div class="btn-nor abs" style="right: 50%;margin-right: -207px;bottom: 50px;" v-if="!editMode" @click="handleMeasureLength">测距</div>
   <div class="tip-body" v-if="measureViewModel.isDrawingMode">右键添加点位，双击暂停编辑，CTRL+鼠标左键移动屏幕</div>
   
   <img v-show="panelView.p1.show" class="v-panel" src="@/assets/panel.png" />
@@ -203,7 +203,7 @@ export default {
         let arr = tokenstr.split('#')
         if (arr.length > 1) {
           setToken(arr[0])
-          this.currentRoleAdmin = arr[1] == 'admin'
+          this.currentRoleAdmin = arr[1] == 'sanqi-admin'
         }
       } else {
         this.lineViewModel.Reset()

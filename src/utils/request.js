@@ -19,7 +19,12 @@ service.interceptors.request.use(
       // let each request carry token
       // ['X-Token'] is a custom headers key
       // please modify it according to the actual situation
-      config.headers['authorization'] = 'Bearer ' + getToken()
+      // config.headers['authorization'] = 'Bearer ' + getToken()
+      if (config.url.indexOf('nocodbv2') >= 0) {
+        config.headers['xc-token'] = 'dS1ahPuE_A2hR33pQj8LKMzra4KwELI2RFkq_ykI'
+      } else {
+        config.headers['authorization'] = 'Bearer ' + getToken()
+      }
     }
     return config
   },
